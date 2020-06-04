@@ -1,159 +1,445 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    width: 100%;
-    height: 1100%;
-    font-size: 14px;
-    background: url('./img/harley-davidson-zGzXsJUBQfs-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.nav {
-    width: 20%;
-    height: auto;
-    position: absolute;
-    margin-top: 10%;
-    left: 0;
-}
-
-.nav a {
-    text-decoration: none;
-    font-size: 28px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    height: 90px;
-    margin: 5px 0 auto;
-    display: block;
-    background: rgb(0, 0, 0);
-    color:  rgba(255, 255, 255, 0);
-    line-height: 90px;
-    text-align: center;
-    transition: 100ms;
-    text-align: left;
-    position: relative;
-    padding-left: 22%;
-    overflow: hidden;
-}
-
-.nav a:not(.active) { 
-  width: 9%;
-  transition: 500ms;
-}
-
-.nav a:not(.active):hover { 
-  width: 90%;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  background: black;
   color: white;
 }
 
-.menuId { 
-  width: 60px;
-  height: 60px;
-  background: url('./img/aboutIcon.svg');
-  transform: scale(0.8);
-  display: block;
-  position: absolute;
-  top: 20%;
-  z-index: 200;
-  background-position: center;
-  background-size: contain;
-  left: 0;
+.checkbtn{
+  margin-top: 4%;
 }
 
-#homeId { 
-    width: 60px;
-    height: 60px;
-    background: url('./img/home.svg');
-    transform: scale(0.8);
+.div{
+  width: 4vw;
+  height: 0.5vw;
+  background: white;
+  margin: 5px;
+}
+
+nav{
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+
+label.logo{
+  color: #f2f2f2;
+  font-size: 33px;
+  line-height: 80px;
+  padding: 0 140px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav ul{
+  float: right;
+  margin-right: 60px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 2px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  /* text-transform: uppercase; */
+  font-family: 'Poppins', sans-serif;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 27px;
+    padding-left: 25px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
     display: block;
-    position: absolute;
-    top: 20%;
-    z-index: 200;
-    background-position: center;
-    background-size: contain;
+    margin-right: 40px;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 70vh;
+    background: #3c4247;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
     left: 0;
+  }
+
+  .picOne, .imgTwo{
+    display: none;
+  }
+
+  .pics{
+    margin-left: 11%;
+  }
+
+  .picTwo,.imgOne{
+    padding-left: 80vw;
+    padding-bottom: 70vw;
+  }
+
+  .icons .facebook{
+    width: 10vw;
+    height: 10vw;
+    background: red;
+  }
+
+  .massage{
+    display: grid;
+    grid-template-columns: repeat(3,10%);
+    margin-top: 10px;
   }
   
-.galleryId { 
-    width: 60px;
-    height: 60px;
-    background: url('./img/art-museum.png');
-    transform: scale(0.8);
-    display: block;
-    position: absolute;
-    top: 20%;
-    z-index: 200;
+  .massOne{
+    width: 5vw;
+    height: 5vw;
+    background: url('./assest/facebook.svg');
     background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
-    left: 0;
   }
-
-  #contactId { 
-    width: 60px;
-    height: 60px;
-    background: url('./img/contact.png');
-    transform: scale(0.8);
-    display: block;
-    position: absolute;
-    top: 20%;
-    z-index: 200;
+  
+  .massTwo{
+    width: 5vw;
+    height: 5vw;
+    background: url('./assest/instagram.svg');
     background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
-    left: 0;
   }
-
-a.active{
-    background: rgb(255, 255, 255);
-    color: rgb(10, 10, 10);
-    font-size: 30px;
+  
+  .massThree{
+    width: 5vw;
+    height: 5vw;
+    background: url('./assest/twitter.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+  margin-left: 10%;
 }
 
-.a {
-    width: 95%;
+.zaddi{
+  width: 35vw;
+  height: 35vw;
+  background: url('./assest/logo.jpg.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 28%;
+  margin-top: 15%;
 }
 
-.b {
-    width: 85%;
+.about h2{
+  font-size: 35px;
+  margin-bottom: 10px;
+} 
+
+.about p{
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  width: 99%;
+  line-height: 19px;
+  letter-spacing: 0.4px;
+  color: rgb(88, 88, 88);
 }
 
-.c {
-    width: 75%;
-}
-
-.d {
-    width: 90%;
-}
-
-.showcase{
-    margin-left: 35%;
+.skill{
+  margin-top: 50px;
 }
 
 .details{
-    padding-top: 50%;
-    color: white;
-    font-size: 25px;
-    padding-left: 10%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.details h1{
-    position: relative;
-}
-
-.details h1::before{
-    position: absolute;
-    content: '';
-    width: 55vw;
-    height: 0.9%;
-    background: red;
-    margin-top: 7.8%;
+  margin: 10px;
 }
 
 .details p{
-    font-size: 98%;
+  font-size: 17px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.percentage{
+  width: 80vw;
+  height: 2.5vw;
+  background: red;
+  position: relative;
+}
+
+.percentage::before{
+  content: '';
+  position: absolute;
+  height: 2.5vw;
+  width: 75vw;
+  background: wheat;
+}
+
+.Barber{
+  width: 80vw;
+  height: 2.5vw;
+  background: red;
+  position: relative;
+}
+
+.Barber::before{
+  content: '';
+  position: absolute;
+  height: 2.5vw;
+  width: 70vw;
+  background: wheat;
+}
+
+.Photography{
+  width: 80vw;
+  height: 2.5vw;
+  background: red;
+  position: relative;
+}
+
+.Photography::before{
+  content: '';
+  position: absolute;
+  height: 2.5vw;
+  width: 65vw;
+  background: wheat;
+}
+
+.photo{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.photo h2{
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.imgs{
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(2,45%);
+}
+
+.imgOne{
+  width: 35vw;
+  height: 40vw;
+  background: url('./assest/img\ 2.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.imgTwo{
+  width: 40vw;
+  height: 45vw;
+  background: red;
+  margin-left: -50px;
+  background: url('./assest/img1.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pics{
+  display: grid;
+  grid-template-columns: repeat(2,45%);
+}
+
+.picOne{
+  width: 35vw;
+  height: 30vw;
+  margin-top: -65px;
+  margin-left: 10px;
+  background: url('./assest/received_791665331662070.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.picTwo{
+  width: 40vw;
+  height: 25.5vw;
+  margin-left: -50px;
+  background: url('./assest/img\ 3.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact{
+  margin-top: 5%;
+  margin-bottom: 10%;
+} 
+
+.contact p{
+  font-size: 15px;
+}
+
+.contact .name{
+  font-size: 25px;
+  margin-bottom: 2%;
+}
+
+.photo button a{
+  background: transparent;
+  color: white;
+}
+
+.photo button{
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  background: transparent;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.icons{
+  display: grid;
+  grid-template-columns: repeat(3,10%);
+}
+
+.icons .facebook{
+  width: 3vw;
+  height: 3vw;
+  background: url('./assest/facebook.svg');
+  margin-top: 10px;  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 10px;
+
+}
+
+.icons .instagram{
+  width: 3vw;
+  height: 3vw;
+  background: url('./assest/instagram.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.icons .tiwtter{
+  width: 3vw;
+  height: 3vw;
+  background: url('./assest/twitter.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+input{
+  display: block;
+  margin: 15px;
+  padding: 20px;
+  padding-right: 70%;
+  color: white;
+  background: white;
+  border: 0;
+}
+
+
+.input button{
+  margin-left: 15px;
+  padding: 10px;
+  border: 0;
+  background: white;
+}
+
+
+
+.center {
+  margin-left: 12px;
+}
+.center a {
+  padding:10px 20px;
+  background:#eee;
+  color:#111;
+  font-size:15px;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:5px;
+}
+#popup {
+  margin-top: 10px;
+  display:none;
+}
+#popup .popup-content {
+  padding:10px 20px;
+}
+#popup a.close-popup {
+  font-size:20px;
+  font-weight:600;
+  text-decoration:none;
+}
+#popup:target {
+  display:block;
+}
+
+footer{
+  color:  rgb(88, 88, 88);
+  text-align: center;
+}
+
+footer p{
+  color:  rgb(88, 88, 88);
+  margin-bottom: 2%;
+}
+
+footer a:hover{
+  background: black;
 }

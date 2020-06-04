@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    box-sizing: border-box;
+}
+
+.checkbtn{
+    margin-top: 4%;
+}
+  
+.div{
+    width: 4vw;
+    height: 0.5vw;
+    background: white;
+    margin: 5px;
+}
+  
+nav{
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+}
+  
+label.logo{
+    color: #f2f2f2;
+    font-size: 33px;
+    line-height: 80px;
+    padding: 0 140px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+  
+nav ul{
+    float: right;
+    margin-right: 60px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 2px;
+}
+
+nav ul li a{
+    color: #f2f2f2;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+      font-size: 27px;
+      padding-left: 25px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+      margin-right: 40px;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 70vh;
+      background: #3c4247;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+}  
+
+.wrapper h1{
+    text-align: center;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10%;
+}
+
+.imgs{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.imgOne{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img1.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.imgTwo{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 2.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgThree{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 3.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.pic{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.picOne{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 4.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.picTwo{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.picThree{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 6.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.pix{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.pixOne{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 7.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.pixTwo{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 8.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pixThree{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 9.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.zad{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.zadOne{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 10.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.zadTwo{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 11.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.zadThree{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 12.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+.zadd{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.zaddOne{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 13.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.zaddTwo{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 14.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.zaddThree{
+    width: 30vw;
+    height: 35vw;
+    background: url('./assest/img\ 15.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+}
+
+button{
+    padding: 10px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-left: 80%;
+}
+
+button a{
+    text-decoration: none;
+    background: black;
+}
+
+button a:hover{
+    background: rgb(43, 101, 226);
+}
+
+button:hover{
+    background: rgb(43, 101, 226);
+    color: white;
+}
+
+footer{
+    color:  rgb(88, 88, 88);
+    text-align: center;
+  }
+  
+  footer p{
+    color:  rgb(88, 88, 88);
+
+    margin-top: 20px;
+  }
+  
+  footer a:hover{
+    background: black;
+  }
